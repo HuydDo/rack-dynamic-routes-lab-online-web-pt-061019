@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 class Application
   def call(env)
     resp = Rack::Response.new
@@ -10,9 +10,8 @@ class Application
       item = @@items.find{|i| i.name == item_name}
         resp.write "#{item.price}"
         resp.status = 200
-      end
-
-      item_not_avail = @@items.find{|i| i.name != item_name}
+      elsif item.empty?
+        binding.pry
         resp.write "Item not found"
         resp.status = 400
       else
