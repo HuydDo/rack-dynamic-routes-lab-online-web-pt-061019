@@ -8,7 +8,7 @@ class Application
     #turn /items/name into name
     item = @@items.find{|i| i.name == item_name}
       resp.write item.price
-  else 
+  else
     resp.write "Rout not found"
     resp.status = 404
   end
