@@ -8,7 +8,7 @@ class Application
       item_name = req.path.split("/items/").last
       #turn /items/name into name
       item = @@items.find{|i| i.name == item_name}
-binding.pry
+# binding.pry
       resp.write "#{item.price}"
       # item.price
       resp.status = 200
