@@ -8,7 +8,7 @@ class Application
       item_name = req.path.split("/items/").last
       #turn /items/name into name
       item = Item.find{|i| i.name == item_name}
-      
+
         # resp.write "item.price"
       item.price
     else
