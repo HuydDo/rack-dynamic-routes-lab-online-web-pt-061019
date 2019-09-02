@@ -9,7 +9,7 @@ class Application
       #turn /items/name into name
       item = @@items.find{|i| i.name == item_name}
 binding.pry
-        # resp.write "item.price"
+      resp.write "#{item.price}"
       item.price
       resp.status = 200
     else
