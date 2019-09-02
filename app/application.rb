@@ -10,7 +10,7 @@ class Application
       item = @@items.find{|i| i.name == item_name}
 binding.pry
       resp.write "#{item.price}"
-      item.price
+      # item.price
       resp.status = 200
     else
       resp.write "Route not found"
